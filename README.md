@@ -258,7 +258,7 @@ In this step, you deploy the API that you created to a stage called prod.
 ![Add API to Usage Plan](./images/add-stage-usageplan-2.jpg)
 
 8. Now, we shall attach our API key to the usage plan. Open Lambda-key API key and click on "Add to Usage plan". Select the "Lambda-dynamodb-usageplan" from the dropdown list. Click Save
-![Add key to Usage Plan](./images/add-key-usageplan.jpg)
+![Add key to Usage Plan](./images/Add-key-usageplan.jpg)
 
 9. Go to API and click Deploy API once again to commit all changes to API.
 
