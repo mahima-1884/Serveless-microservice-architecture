@@ -293,10 +293,12 @@ In this step, you deploy the API that you created to a stage called prod.
     $ curl -X POST -d "{\"operation\":\"create\",\"tableName\":\"lambda-apigateway\",\"payload\":{\"Item\":{\"id\":\"1\",\"name\":\"Bob\"}}}" https://$API.execute-api.$REGION.amazonaws.com/prod/DynamoDBManager 
     
     ```   -->
-2. To execute our API go to https://reqbin.com/. Paste the API invoke URL. Under content select "Json" and paste the above code. Under authorization, select "no-auth". Then, go to "Headers" and type x-api-key: <paste API Key>
+2. To execute our API go to https://reqbin.com/. Paste the API invoke URL. Under content select "Json" and paste the above code. Under authorization, select "no-auth". Then, go to "Headers" and type x-api-key: (and paste the api key)
 
 ![Post API Request](./images/post-api-request.jpg)
 ![Post API Request](./images/post-api-request-2.jpg)
+
+A successful post will return a "status code: 200"
 
 3. To validate that the item is indeed inserted into DynamoDB table, go to Dynamo console, select "lambda-apigateway" table, select "Items" tab, and the newly inserted item should be displayed.
 
@@ -312,7 +314,8 @@ In this step, you deploy the API that you created to a stage called prod.
     }
 }
 ```
-![List Dynamo Items](./images/dynamo-item-list.jpg)
+<![List Dynamo Items](./images/dynamo-item-list.jpg)>
+Similarly, try other operations like read, delete, update etc.
 
 We have successfully created a serverless API using API Gateway, Lambda, and DynamoDB!
 
